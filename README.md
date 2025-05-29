@@ -81,3 +81,4 @@ Now we will querying application.
 # Step 10: You need to have an API key for Mistral. You can get it from [Mistral](https://mistral.ai/). Set it as an environment variable:
 
 
+# Step 11: Create the Querying Script (```query.py```)
