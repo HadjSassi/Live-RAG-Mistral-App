@@ -4,6 +4,7 @@ run:
 	python main.py
 
 cli:
-    python query.py
+	python query.py
+
 stop:
 	docker ps -q --filter ancestor=qdrant/qdrant | xargs -r docker stop
