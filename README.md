@@ -1,3 +1,16 @@
+# Steps To follow!
+Still not dockerized, but you can run it locally.
+```bash
+python venv .venv
+```
+
+```bash
+source venv/bin/activate
+```
+```bash
+pip install -r requirements.txt
+```
+
 # Overview
 
 ####  New File in documents/

@@ -1,5 +1,5 @@
 import requests
-from env import MISTRAL_API_KEY, ENDPOINT
+from config.env import MISTRAL_API_KEY, ENDPOINT
 
 def query_mistral(messages):
     headers = {

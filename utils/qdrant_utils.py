@@ -4,7 +4,7 @@ from uuid import uuid4
 
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
-from env import COLLECTION_NAME,VECTOR_SIZE, HOST, PORT
+from config.env import COLLECTION_NAME,VECTOR_SIZE, HOST, PORT
 
 client = QdrantClient(host= HOST, port= PORT)
 

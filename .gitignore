@@ -1,5 +1,10 @@
+documents
 documents/*
 .venv
 .idea
+config/apiKey.py
+config/databaseConfig.py
+config/databaseDescription.py
+Test.py
 __pycache__
 __pycache__/*
