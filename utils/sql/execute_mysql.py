@@ -7,6 +7,9 @@ import pymysql
 from config.databaseConfig import CONFIG
 
 def execute_mysql_query(sql_query):
+    # Vérifier si la requête commence par "select"
+    if not sql_query.strip().lower().startswith("select"):
+        return "❌ Erreur : Seules les requêtes commençant par 'select' sont autorisées."
 
     try:
         conn = pymysql.connect(
