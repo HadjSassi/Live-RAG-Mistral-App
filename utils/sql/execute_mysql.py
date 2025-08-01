@@ -1,5 +1,8 @@
 # execute_mysql.py
-
+import sys
+import os
+# Ensure the parent directory is in the path to import config when running this script directly
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 import pymysql
 from config.databaseConfig import CONFIG
 
@@ -46,3 +49,5 @@ def test_database_connection():
     except Exception as e:
         return f"❌ Échec de la connexion : {e}"
 
+if __name__ == "__main__":
+    print(test_database_connection())
