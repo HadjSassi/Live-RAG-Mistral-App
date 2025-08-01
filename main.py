@@ -1,6 +1,6 @@
 # CLI & main logic
-from utils.qdrant_utils import init_qdrant
-from utils.file_watcher import start_watching
+from utils.rag.qdrant_utils import init_qdrant
+from utils.rag.file_watcher import start_watching
 
 if __name__ == "__main__":
     print("🚀 Starting RAG Live App")

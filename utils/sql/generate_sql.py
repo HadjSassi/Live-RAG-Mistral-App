@@ -1,6 +1,6 @@
 # generate_sql.py
 
-from utils.query_mistral import query_mistral
+from utils.rag.query_mistral import query_mistral
 
 def generate_relational_query(question, table_description):
     prompt = [

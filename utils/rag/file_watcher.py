@@ -5,8 +5,8 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import os
 
-from utils.embedder import chunk_text, embed_chunks
-from utils.qdrant_utils import add_documents
+from utils.rag.embedder import chunk_text, embed_chunks
+from utils.rag.qdrant_utils import add_documents
 
 def read_file(path):
     with open(path, "r", encoding="utf-8") as f:

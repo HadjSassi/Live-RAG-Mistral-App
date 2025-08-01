@@ -2,8 +2,8 @@
 # retriever.py
 
 from qdrant_client import QdrantClient
-from utils.embedder import embed_text
-from utils.qdrant_utils import COLLECTION_NAME
+from utils.rag.embedder import embed_text
+from utils.rag.qdrant_utils import COLLECTION_NAME
 from config.env import HOST, PORT
 
 client = QdrantClient(HOST, port=PORT)
