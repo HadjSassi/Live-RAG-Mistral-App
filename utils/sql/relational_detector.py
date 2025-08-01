@@ -2,8 +2,7 @@
 
 from utils.query_mistral import query_mistral
 
-
-def is_relational_query(question):
+def is_relational_query(question, db_description):
     prompt = [
         {
             "role": "system",
@@ -15,10 +14,15 @@ def is_relational_query(question):
         },
         {
             "role": "user",
-            "content": f"Question : {question}\n\nEst-ce une requête relationnelle ?"
+            "content": (
+                f"Description de la base de données : {db_description}\n"
+                f"Question : {question}\n\n"
+                "Est-ce une requête relationnelle ?"
+            )
         }
     ]
-
-    response = query_mistral(prompt).strip().lower()
-
-    return "true" in response
+    try:
+        response = query_mistral(prompt).strip().lower()
+        return "true" in response
+    except Exception as e:
+        return False  # En cas d'erreur, on considère que ce n'est pas une requête relationnelle

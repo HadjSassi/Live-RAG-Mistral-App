@@ -57,26 +57,38 @@ CONFIG = {
 # you need to fill the description dictionnary, the key is the table name,
 # and the value is the table description
 DESCRIPTION = {
-    "exp_table":"
-                    create table exp_table (field int);
-                ",
-    "exp_table2":"
-                    create table exp_table2 (field int);
-                "
+    "table1":'''
+        +----+-------+
+        | id | name  |
+        +----+-------+
+        | int| text  |
+        +----+-------+
+    ''',
+    "table2":'''
+        +----+-------+
+        | id | name  |
+        +----+-------+
+        | int| text  |
+        +----+-------+
+    '''
 }
 
-# it's good to provide some examples of the tables, you can run the query 
-# select * from table_name limit(5);
+# it's good to provide some examples of the tables, you can run the query
+# select * from table_name limit 1;
 EXAMPLES = {
-    "exp_table":"
-        field
-        1
-        2
-    ",
-    "exp_table2":
-        field
-        1
-        2
-    "
+    "table1":'''
+        +----+-------+
+        | id | name  |
+        +----+-------+
+        |  1 | foo   |
+        +----+-------+
+    ''',
+    "table2":'''
+        +----+-------+
+        | id | name  |
+        +----+-------+
+        |  1 | bar   |
+        +----+-------+
+    '''
 }
 ```

@@ -1,5 +1,5 @@
 # query.py
-from config.databaseConfig import CONFIG
+from config.databaseDescription import get_full_database_info
 from utils.sql.execute_mysql import execute_mysql_query
 from utils.sql.generate_sql import generate_relational_query
 from utils.sql.relational_detector import is_relational_query
@@ -21,6 +21,10 @@ def handle_relational_query(question, db_description,):
     print("\n📄 Requête SQL générée :\n", sql)
     result = execute_mysql_query(sql)
     print("\n📊 Résultat de la requête :\n", result)
+    context = f"Résultat SQL :\n{result}"
+    messages = format_prompt(context, question)
+    answer = query_mistral(messages)
+    print("\n🤖 Réponse Mistral :\n", answer)
 
 def handle_contextual_query(question):
     print("📚 Recherche contextuelle en cours...")
@@ -45,8 +49,8 @@ def main():
                 os.system("clear")
                 continue
 
-            if is_relational_query(question):
-                handle_relational_query(question, CONFIG["database_description"])
+            if is_relational_query(question, get_full_database_info()):
+                handle_relational_query(question, get_full_database_info())
             else:
                 handle_contextual_query(question)
 
