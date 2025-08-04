@@ -10,4 +10,4 @@ def handle_relational_query(question, db_description,):
     result = execute_mysql_query(sql)
     print("\n📊 Résultat de la requête :\n", result)
     context = f"Résultat SQL :\n{result}"
-    get_mistral_response(context, question)
+    return get_mistral_response(context, question)

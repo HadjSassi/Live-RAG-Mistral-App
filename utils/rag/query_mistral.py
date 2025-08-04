@@ -11,6 +11,7 @@ def get_mistral_response(context, question):
     messages = format_prompt(context, question)
     answer = query_mistral(messages)
     print("\n🤖 Réponse Mistral :\n", answer)
+    return answer
 
 def query_mistral(messages):
     headers = {
