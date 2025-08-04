@@ -11,6 +11,18 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## WEB APP: ChatBot using Streamlit
+
+this command will run the Streamlit app, and will intialize the Qdrant database, and start the file watcher.
+
+```bash
+   make run
+```
+
+- /!\ Still the Dockerization is not done yet.
+- /!\ Still the Database Settings is not done yet.
+- You can upload the files in the folder `documents/` and the file watcher will automatically index them.
+
 # Overview
 
 ####  New File in documents/
