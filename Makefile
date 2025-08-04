@@ -6,10 +6,14 @@ run:
 	fi
 	docker run -d --rm -p 6333:6333 -p 6334:6334 --name qdrant qdrant/qdrant
 	sleep 1
-	$(VENV_ACTIVATE) && python main.py
+	$(VENV_ACTIVATE) && python main.py &
+
+appli:
+	$(VENV_ACTIVATE) && streamlit run app/__init__.py &
 
 cli:
 	$(VENV_ACTIVATE) && python query.py
 
 stop:
+	pkill -f "streamlit" || true
 	docker ps -q --filter ancestor=qdrant/qdrant | xargs -r docker stop
