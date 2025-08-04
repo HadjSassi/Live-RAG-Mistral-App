@@ -4,6 +4,7 @@ def render_conversation():
     dialogue_placeholder = st.empty()
     with dialogue_placeholder.container():
         st.title("Conversation")
+        st.warning("/!\Please don't click twice on the 'Send' button, it will send your message twice/!\\")
         for entry in st.session_state.chat_history:
             if entry["sender"] == "user":
                 col1, col2 = st.columns([1, 5])
