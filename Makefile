@@ -9,7 +9,7 @@ run:
 	$(VENV_ACTIVATE) && python main.py &
 
 appli:
-	$(VENV_ACTIVATE) && streamlit run app/__init__.py &
+	$(VENV_ACTIVATE) && streamlit run app/Home.py &
 
 cli:
 	$(VENV_ACTIVATE) && python query.py
