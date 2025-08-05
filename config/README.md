@@ -1,12 +1,17 @@
 # credentials folder
 
 in this folder you should have this structure :
-- credentials
+- files already existing:
   - apiKey.py
   - databaseConfig.py
   - databaseDescription.py
+  - env.py
+  - README.md
+- files to be created automatically:
+  - databaseConfig.json
+  - databaseDescription.json
 
-Each file should follow this structure:
+### ensure that Each file should follow this structure:
 
 # apiKey.py
 ```

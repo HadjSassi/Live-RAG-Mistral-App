@@ -1,5 +1,8 @@
 # Steps To follow!
 Still not dockerized, but you can run it locally.
+
+Please check the [config/README.md](config/README.md) for the credentials and database configuration.
+
 ```bash
 python venv .venv
 ```
@@ -21,6 +24,8 @@ this command will run the Streamlit app, and will intialize the Qdrant database,
 
 - /!\ Still the Dockerization is not done yet.
 - /!\ Still the Database Settings is not done yet.
+  - for sqlite
+  - for postgresql
 - You can upload the files in the folder `documents/` and the file watcher will automatically index them.
 
 # Overview
