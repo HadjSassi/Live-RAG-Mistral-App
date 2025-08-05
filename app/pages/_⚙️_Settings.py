@@ -2,7 +2,11 @@ import streamlit as st
 import json
 import os
 from config import databaseConfig
-from utils.sql.execute_mysql import test_database_connection  # nouvel import
+from utils.sql.execute_mysql import test_database_connection
+from utils.sql.execute_mysql import fetch_tables_info
+from config.databaseDescription import update_database_description
+
+st.warning("Il est nécessaire de tester la connexion à la base de données après avoir modifié la configuration.\nCela remplira la description de la base de données.")
 
 config = databaseConfig.CONFIG
 
@@ -65,6 +69,7 @@ with st.form("config_form"):
 if st.button("Tester la connexion"):
     result = test_database_connection()
     if result.startswith("✅"):
+        update_database_description(fetch_tables_info())
         st.success(result)
     else:
         st.error(result)
