@@ -3,7 +3,7 @@ documents/*
 .venv
 .idea
 config/apiKey.py
-config/databaseConfig.py
+config/databaseConfig.json
 config/databaseDescription.py
 Test.py
 __pycache__
